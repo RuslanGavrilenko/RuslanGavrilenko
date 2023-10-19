@@ -74,8 +74,3 @@ Email(почта): rus.gavrilenko.85@gmail.com
 
 Телефон: +7-936-166-42-43
 
-**Резюме на русском:**
-
-[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a2c077d4-9ae9-466b-af44-515fd279ea31/042f0b7f-b7b9-4b3b-89f2-784031465dec/Untitled.docx)
-
-**Резюме на английском:**
