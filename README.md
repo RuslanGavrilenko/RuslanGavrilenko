@@ -68,9 +68,4 @@
 
 https://docs.google.com/document/d/1u7rPIWa8ggUTMIAZfmFIET-B07ahL4EkWn9Jqm2YlgM/edit?usp=sharing
 
-## Контактная информация
-
-Email(почта): rus.gavrilenko.85@gmail.com
-
-Телефон: +7-936-166-42-43
 
