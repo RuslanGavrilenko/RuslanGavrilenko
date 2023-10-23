@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "eb1e987c-e31c-4755-b6ef-c80d73120008",
+		"name": "ToDo List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28935313"
+	},
+	"item": [
+		{
+			"name": "шаг 1 (список)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ШАГ 2 (добавление)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"пробный\",\"completed\":false}"
+				},
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "шаг 3 (проверка списка)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"пробный\",\"completed\":false}"
+				},
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com/90304",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"90304"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ШАГ 4 (выполение)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"completed\":true}"
+				},
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com/90304",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"90304"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Шаг 5( проверка выполнения)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com/90304",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"90304"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Шаг 5 ( удаление)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					}
+				],
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com/90304",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"90304"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Шаг 6 ( проверка удаления)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sky-todo-list.herokuapp.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sky-todo-list.herokuapp.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?1"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Android\""
+					}
+				],
+				"url": {
+					"raw": "https://todo-app-sky.herokuapp.com/90304",
+					"protocol": "https",
+					"host": [
+						"todo-app-sky",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"90304"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Заглушка",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Задолбала домашка\",\r\n    \"completed\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8095",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Запрос на заглушку",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "result",
+						"value": "empty list",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8095",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095"
+				}
+			},
+			"response": []
+		}
+	]
+}
