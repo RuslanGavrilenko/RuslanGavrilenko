@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "f424c521-f7c0-4d1b-95e4-ece68b187d01",
+		"name": "Trello Copy MoY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28935313"
+	},
+	"item": [
+		{
+			"name": "Доска",
+			"item": [
+				{
+					"name": "Создание",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"BoardID\"\r",
+									"var value = pm.response.json().id //Вместо id можно использовать другое поле  json\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"defaultLists\":false,\r\n    \"name\":\"{{Новая1}}\",\r\n    \"token\":\"{{Token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/boards/",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"boards",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/boards/{{BoardID}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"boards",
+								"{{BoardID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Списки",
+			"item": [
+				{
+					"name": "Создание список 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"Listid1\"\r",
+									"var value = pm.response.json().id //Вместо id можно использовать другое поле  json\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Список мой\",\r\n    \"idBoard\":\"{{BoardID}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/lists",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Создание список 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"Listid2\"\r",
+									"var value = pm.response.json().id //Вместо id можно использовать другое поле  json\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Список мой 2\",\r\n    \"idBoard\":\"{{BoardID}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/lists",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/lists/{{Listid1}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"lists",
+								"{{Listid1}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Карточки",
+			"item": [
+				{
+					"name": "Создание",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"CardId\"\r",
+									"var value = pm.response.json().id //Вместо id можно использовать другое поле  json\r",
+									"pm.collectionVariables.set(key, value)\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"{{Token}}\",\r\n    \"name\":\"{{$randomFileName}}\",\r\n    \"idList\":\"{{Listid1}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/cards",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Изминение названия",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Поменял\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/cards/{{CardId}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"cards",
+								"{{CardId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Смена списка",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idList\":\"{{Listid1}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/cards/{{CardId}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"cards",
+								"{{CardId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Получение инфы",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/cards/{{CardId}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"cards",
+								"{{CardId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Добавление коментария",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"тест\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/cards/{{CardId}}/actions/comments",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"cards",
+								"{{CardId}}",
+								"actions",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"{{Token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/cards/{{CardId}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"cards",
+								"{{CardId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"{{Token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/{{versia}}/boards/{{BoardID}}",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{versia}}",
+								"boards",
+								"{{BoardID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "64ce31248db8bb802a552710%2FATTS8TA3Nc4zhrqOgUnLXSp8deQFAtXw6MU6Hp7UIarDjyDXfNsRWggsBsbjxnHaiT46E4F9D36A",
+			"type": "string"
+		},
+		{
+			"key": "versia",
+			"value": "1"
+		},
+		{
+			"key": "CardId",
+			"value": "64d0fc1d11f0664a85274e5c"
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://trello.com",
+			"type": "string"
+		},
+		{
+			"key": "BoardID",
+			"value": ""
+		},
+		{
+			"key": "Listid1",
+			"value": ""
+		},
+		{
+			"key": "Listid2",
+			"value": ""
+		}
+	]
+}
