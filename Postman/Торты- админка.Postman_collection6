@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "39ef1086-101b-4b72-b5fb-c552ad0daf25",
+		"name": "Торты: админка",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28935313"
+	},
+	"item": [
+		{
+			"name": "Добавление торта",
+			"item": [
+				{
+					"name": "запрос списка поводов",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{baseUrl}}/api/occasions",
+							"protocol": "https",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"occasions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "запрос списка для кого торт",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://buy-cakes.herokuapp.com/api/cakes\n",
+							"protocol": "https",
+							"host": [
+								"buy-cakes",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cakes\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signGen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{baseUrl}}/api/signGen",
+							"protocol": "https",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"signGen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Ксю/Desktop/6d6ea5f6d6b0064f8933e5e4be6f855b.jpg"
+								},
+								{
+									"key": "signature",
+									"value": "aa63261d41a653b70c25d6e0acb58741f6a1bf39",
+									"type": "text"
+								},
+								{
+									"key": "timestamp",
+									"value": "1688148436",
+									"type": "text"
+								},
+								{
+									"key": "api_key",
+									"value": "942523823911793",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.cloudinary.com/v1_1/hgp9fyb5i/image/upload",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cloudinary",
+								"com"
+							],
+							"path": [
+								"v1_1",
+								"hgp9fyb5i",
+								"image",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"123\",\"photoFileName\":\"vqzmgtmplm6gayu4si6j\",\"description\":\"321\",\"forWhoId\":0,\"occasionId\":0}"
+						},
+						"url": {
+							"raw": "https://{{baseUrl}}/api/cakes/add",
+							"protocol": "https",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cakes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "функционал получения списка тортов",
+			"item": [
+				{
+					"name": "получение списка тортов",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{baseUrl}}/api/cakes",
+							"protocol": "https",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "функционал удаления тортов",
+			"item": [
+				{
+					"name": " delete cakes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{baseUrl}}/api/cakes/94497",
+							"protocol": "https",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cakes",
+								"94497"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "buy-cakes.herokuapp.com",
+			"type": "string"
+		}
+	]
+}
