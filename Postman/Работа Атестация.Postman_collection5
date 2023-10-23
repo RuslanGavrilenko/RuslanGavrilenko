@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "971627b9-b59f-4c4f-8a03-21ed6994a40f",
+		"name": "Работа Атестация",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28935313"
+	},
+	"item": [
+		{
+			"name": "Киев координаты",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Yandex-API-Key",
+						"value": "{{Kies }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.weather.yandex.ru/v2/forecast?lat=30.5238&lon=50.4547&extra=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weather",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "30.5238"
+						},
+						{
+							"key": "lon",
+							"value": "50.4547"
+						},
+						{
+							"key": "extra",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Москва координаты",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Yandex-API-Key",
+						"value": "{{Kies }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.weather.yandex.ru/v2/forecast?lat=37.363600&lon=55.442400&ru_RU",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weather",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "37.363600"
+						},
+						{
+							"key": "lon",
+							"value": "55.442400"
+						},
+						{
+							"key": "ru_RU",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Москва координаты негатив",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Yandex-API-Key",
+						"value": "{{Kies }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.weather.yandex.ru/v2/forecast?lat=37/363600&lon=55.442/400&ru_RU",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weather",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "37/363600"
+						},
+						{
+							"key": "lon",
+							"value": "55.442/400"
+						},
+						{
+							"key": "ru_RU",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Штаб Google Калифорния",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Yandex-API-Key",
+						"value": "{{Kies }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.weather.yandex.ru/v2/forecast?lat=35.0732&lon=117.5909&en_US",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weather",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "35.0732"
+						},
+						{
+							"key": "lon",
+							"value": "117.5909"
+						},
+						{
+							"key": "en_US",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Штаб Google Калифорния негатив",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Yandex-API-Key",
+						"value": "{{Kies }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.weather.yandex.ru/v2/forecast?lat=35°07′32&lon=117°59′09&en_US",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weather",
+						"yandex",
+						"ru"
+					],
+					"path": [
+						"v2",
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "35°07′32"
+						},
+						{
+							"key": "lon",
+							"value": "117°59′09"
+						},
+						{
+							"key": "en_US",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Kies ",
+			"value": "9f043a3c-5845-4193-b8a0-425c5277aeae",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string"
+		}
+	]
+}
