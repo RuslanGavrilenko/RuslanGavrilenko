@@ -21,8 +21,8 @@
 
 ## Проекты
 
-**Курсовая работа 1-й и 2-й курс (**https://trello88.atlassian.net/wiki/spaces/~64131fe49d2bc6c90a8a0720/pages/393217/1-+2-**)**
-**Курсовая работа по тестированию мобильных приложений (https://ruslangavrileeko.atlassian.net/wiki/home)
+**Курсовая работа 1-й и 2-й курс (**https://trello88.atlassian.net/wiki/spaces/~64131fe49d2bc6c90a8a0720/pages/393217/1-+2-**)
+**Курсовая работа по тестированию мобильных приложений (**https://ruslangavrileeko.atlassian.net/wiki/home**)
 
 **Роботы в Postman**:
 
